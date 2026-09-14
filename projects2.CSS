@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b18;
+    color: #ffffff;
+    line-height: 1.6;
+}
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: #081B33;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: hideLoader 3s forwards;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #0D2745;
+    border-top: 5px solid #00C6FF;
+    border-right: 5px solid #0066FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loader h2 {
+    color: #00C6FF;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hideLoader {
+    0%, 80% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.section-title h2 {
+    font-size: 42px;
+    margin-top: 5px;
+     animation: dropDown 5.0 ease;
+}
+.section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 110px 0;
+     animation: dropDown 5.0 ease;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+     animation: dropDown 5.0 ease;
+}
+.section-title h2 span {
+    color: #008cff;
+     animation: dropDown 5.0 ease;
+}
+img{
+    display: inline-block;
+    padding-left: 50px;
+     animation: dropDown 5.0 ease;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(0, 140, 255, 0.1);
+    color: #718096;
+     animation: dropDown 5.0 ease;
+}
+footer span {
+    color: #008cff;
+     animation: dropDown 4.2 ease;
+}

@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(WhatsApp\ Image\ 2026-09-11\ at\ 9.31.10\ PM.jpeg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    width: 420px;
+    padding: 45px;
+    background: #0B101A;
+    border: 1px solid #0066FF;
+    border-radius: 24px;
+    box-shadow:
+        0 0 30px rgba(0, 102, 255, 0.18),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+          animation: dropDown 5.7s ease;
+}
+.login-box h1 {
+    color: #00C6FF;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.login-box > p {
+    color: #8BA9C7;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    animation: dropDown 3.3s ease;
+}
+label {
+    color: #B9D8F5;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    background: #070B12;
+    color: white;
+    border: 1px solid #174B82;
+    border-radius: 12px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+      animation: dropDown 3.5s ease;
+}
+input::placeholder {
+    color: #607D99;
+}
+input:focus {
+    outline: none;
+    border-color: #00C6FF;
+    box-shadow:
+        0 0 0 3px rgba(0, 198, 255, 0.1),
+        0 0 15px rgba(0, 102, 255, 0.15);
+}
+button {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        #0066FF,
+        #00C6FF
+    );
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: dropDown 3.4 ease;
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 25px rgba(0, 102, 255, 0.35);
+}
+.signup {
+    text-align: center;
+    margin-top: 25px;
+}
+.signup a {
+    color: #00C6FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+.signup a:hover {
+    color: #0066FF;
+}
+@media (max-width: 500px) {
+    .login-box {
+        width: 90%;
+        padding: 30px 25px;
+    }
+    .login-box h1 {
+        font-size: 25px;
+    }
+}
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: #081B33;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: hideLoader 3s forwards;
+}
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #0D2745;
+    border-top: 5px solid #00C6FF;
+    border-right: 5px solid #0066FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.loader h2 {
+    color: #00C6FF;
+    margin-top: 20px;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes hideLoader {
+    0%, 80% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
